@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import CollectionDetails from "./components/CollectionDetails";
+import CollectionGallery from "./components/CollectionGallery";
+import Navbar from "./components/Navbar";
+import NFTDetails from "./components/NFTDetails";
+import SearchGallery from "./components/SearchGallery";
+import Main from "./Main";
 
 function App() {
+  const [query, setQuery] = useState("");
+
+  const searchHandler = (event) => {
+    event.preventDefault();
+    setQuery(event.target.value);
+  };
+
+  const blurHandler = (event) => {
+    event.preventDefault();
+    setQuery("");
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar blur={blurHandler} value={query} search={searchHandler} />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="gallery" element={<CollectionGallery />} />
+        <Route path="searchgallery" element={<SearchGallery query={query} />} />
+        <Route path="collectiondetails" element={<CollectionDetails />} />
+        <Route path="nftdetails" element={<NFTDetails />} />
+      </Routes>
+    </>
   );
 }
 
