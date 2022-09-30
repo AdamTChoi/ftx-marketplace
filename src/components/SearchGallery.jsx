@@ -1,6 +1,5 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import AnimatedPage from "../ui/AnimatedPage";
 import GalleryCard from "../ui/card/GalleryCard";
@@ -9,7 +8,7 @@ import SpinLoader from "../ui/SpinLoader";
 
 const SearchGallery = (props) => {
   const [lastElement, setLastElement] = useState(null);
-  const location = useLocation();
+
   const navigate = useNavigate();
 
   const {
@@ -24,7 +23,7 @@ const SearchGallery = (props) => {
 
   useEffect(() => {
     setExclusive(1000);
-  }, []);
+  }, [setExclusive]);
 
   return (
     <AnimatedPage>
@@ -68,7 +67,7 @@ const SearchGallery = (props) => {
                       <div key={item.group_id + index} ref={setLastElement}>
                         <GalleryCard
                           data={item}
-                          name={item.group_id}
+                          // name={item.group_id}
                           desc={
                             item.collectionDict.description
                               ? item.collectionDict.description
@@ -88,6 +87,7 @@ const SearchGallery = (props) => {
                                 data: item,
                               },
                             });
+                            console.log(`search item click 1`);
                           }}
                         />
                       </div>
@@ -115,6 +115,7 @@ const SearchGallery = (props) => {
                               data: item,
                             },
                           });
+                          console.log(`search item click`);
                         }}
                       />
                     );

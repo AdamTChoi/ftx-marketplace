@@ -16,14 +16,9 @@ function App() {
     setQuery(event.target.value);
   };
 
-  const blurHandler = (event) => {
-    event.preventDefault();
-    setQuery("");
-  };
-
   return (
     <>
-      <Navbar blur={blurHandler} value={query} search={searchHandler} />
+      <Navbar value={query} setQuery={setQuery} search={searchHandler} />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="gallery" element={<CollectionGallery />} />

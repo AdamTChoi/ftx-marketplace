@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
 const GalleryCard = (props) => {
   //onClick navigate with prop identifier (name or id) to collectionDetails or to NFTDetails. Make navigate location into prop.

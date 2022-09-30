@@ -76,7 +76,7 @@ const CollectionDetails = () => {
             </div>
           </div>
           <div className="md:mt-4 pt-2 md:px-4 border-black">
-            <ul className="pt-2 bg-black  sm:py-0 md:pl-6 flex flex-row gap-2 justify-evenly md:justify-center font-bold text-white">
+            <ul className="h-[40px] pt-2 bg-black sm:py-0 md:pl-6 flex flex-row gap-2 items-center justify-evenly md:justify-center font-bold text-white">
               {location.state.data.collectionDict.homepageUrl ? (
                 <li className="sm:px-3 cursor-pointer hover:translate-y-[-3px] duration-300 md:text-xl">
                   <a
@@ -88,7 +88,7 @@ const CollectionDetails = () => {
                   </a>
                 </li>
               ) : (
-                ""
+                <li className="sm:px-3 md:text-xl">-</li>
               )}
               {location.state.data.collectionDict.twitterUrl ? (
                 <li className="sm:px-3 cursor-pointer hover:translate-y-[-3px] duration-300 md:text-xl">

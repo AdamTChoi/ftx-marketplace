@@ -75,8 +75,8 @@ const NFTDetails = () => {
               </div>
             </div>
           </div>
-          <div className="md:mt-4 pt-2 md:px-4 border-black">
-            <ul className="pt-2 bg-black  sm:py-0 md:pl-6 flex flex-row gap-2 justify-evenly md:justify-center font-bold text-white">
+          <div className=" md:mt-4 pt-2 md:px-4 border-black">
+            <ul className="pt-2 h-[40px] bg-black items-center sm:py-0 md:pl-6 flex flex-row gap-2 justify-evenly md:justify-center font-bold text-white">
               {location.state.data.collectionDict.homepageUrl ? (
                 <li className="sm:px-3 cursor-pointer hover:translate-y-[-3px] duration-300 md:text-xl">
                   <a
@@ -88,7 +88,7 @@ const NFTDetails = () => {
                   </a>
                 </li>
               ) : (
-                ""
+                <li className="sm:px-3 md:text-xl">-</li>
               )}
               {location.state.data.collectionDict.twitterUrl ? (
                 <li className="sm:px-3 cursor-pointer hover:translate-y-[-3px] duration-300 md:text-xl">
@@ -130,9 +130,9 @@ const NFTDetails = () => {
                 />
               </div>
             </div>
-            <div className="pt-4 md:pt-0 md:px-10 flex items-center justify-center">
+            <div className="pt-4 md:pt-0 md:px-0 lg:px-6 flex items-center justify-center">
               <div className="flex flex-col gap-4">
-                <p className="font-bold text-2xl">
+                <p className="font-bold md:mt-6 text-2xl">
                   {location.state.name} - {location.state.data.first_nft.name}
                 </p>
                 <p className="flex items-center gap-4">
