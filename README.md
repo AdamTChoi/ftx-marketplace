@@ -4,6 +4,8 @@
   - lcp --proxyUrl https://www.fts.us
 
  - Unable to access second API endpoint of "filtered_nfts" even with proxy.
- - Commented out methodology to accessing NFTs that are part of a collection.
+ - Commented out methodology to access NFTs that are part of a collection.
 
- Would love to discuss more!
+ - Would love to discuss more!
+ 
+ Thanks.
