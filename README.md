@@ -12,7 +12,7 @@
 -----------------------------------------
  - Unable to access second API endpoint of "filtered_nfts" even with proxy.
  - Commented out methodology to access NFTs that are part of a collection.
-
+-----------------------------------------
  - Would love to discuss more!
  
  Thanks.
