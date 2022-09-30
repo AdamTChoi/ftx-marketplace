@@ -4,7 +4,7 @@
   - lcp --proxyUrl https://www.ftx.us
 
 - Implemented Infinite Scrolling
-- Implemented Search/Filter for API Collections
+- Implemented Search/Filter for API Collections (takes a sec)
 - Transfer API data between routes/pages
 - useFetch custom hook for efficient state mobility
 
