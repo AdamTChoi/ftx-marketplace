@@ -1,8 +1,9 @@
-# FTX-marketplace for NFTs with React. Explore and search through API collections. Click a collection to see more details and collection NFTs. Click NFT to see specific NFT detail.
+# FTX-marketplace for NFTs using React. Explore and search through API collections. Click a collection to see more details and NFTs that are a part of specified collection. Click NFT to see specific NFT detail.
+-----------------------------------------
 
  - You may run into CORs errors when developing. Please use https://www.npmjs.com/package/local-cors-proxy.
   - $ lcp --proxyUrl https://www.ftx.us
-
+-----------------------------------------
 - Implemented Infinite Scrolling
 - Implemented Search/Filter for API Collections (takes a sec)
 - Transfer API data between routes/pages
